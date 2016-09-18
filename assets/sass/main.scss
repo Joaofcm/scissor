@@ -4,11 +4,7 @@
 @import 'font-awesome.min.css';
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
 
-/*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 @import 'libs/skel';
 @include skel-breakpoints(( xlarge: '(max-width: 1680px)', large: '(max-width: 1280px)', medium: '(max-width: 980px)', small: '(max-width: 736px)', xsmall: '(max-width: 480px)'));
@@ -823,6 +819,7 @@ button,
     list-style: none;
     padding: 0;
     width: 100%;
+    border-radius: 5px;
     li {
         @include padding(4em,
         4em,
@@ -831,7 +828,9 @@ button,
         position: relative;
         text-align: left;
         width: 50%;
-        background-color: #fff;
+        background-color: transparent;
+        transition: all 500ms ease-in-out;
+        border-radius: 5px;
          &:before {
             display: block;
             color: _palette(accent2, bg);
@@ -873,6 +872,13 @@ button,
                 border-top: 0;
             }
         }
+    }
+    
+    li:hover{
+        
+        background-color: #f9f9f9;
+        box-shadow: 0 30px 50px -20px rgba(0,0,0,0.6);
+        transition: all 500ms ease-in-out;  
     }
 }
 
