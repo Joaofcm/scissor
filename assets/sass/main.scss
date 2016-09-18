@@ -2,8 +2,7 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'font-awesome.min.css';
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
-
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
 
 
 @import 'libs/skel';
@@ -41,7 +40,7 @@ select,
 textarea {
     color: _palette(fg);
     font-family: _font(family);
-    font-size: 15pt;
+    font-size: 20pt;
     font-weight: _font(weight);
     letter-spacing: _size(letter-spacing);
     line-height: 1.65em;
@@ -208,10 +207,14 @@ article {
 }
 
 header {
+    h2{
+        padding-top: 2rem;
+    }
     p {
         color: _palette(fg-light);
         position: relative;
         top: -0.25em;
+        margin: 1rem 0 6frem 0;;
     }
     h2 + p {}
     h3 + p {
