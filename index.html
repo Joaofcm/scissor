@@ -5,8 +5,9 @@
 		<title></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/animations.css" />
+        
 	</head>
 	<body class="landing">
 
@@ -58,7 +59,7 @@
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major thiscolor">
-                                <!--alterar cor de fundo para cinza claro e adicionar os icos corretos-->
+                                <!--Adicionar os icos corretos-->
 								<h2>Reflect what makes you unique</h2>
 								<p>Imagine the craftman dedication and passion applied to your projects.<br />
 								At Scissor we specialize in making you and your customers happy.</p>
@@ -98,33 +99,33 @@
 				<!-- Three -->
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
-							<header class="major">
-								<h2>What we do</h2>
-								<p>Your brand is what you believe in and how that´s brought to life is your audience.<br>Let us merge those two.</p>
+							<header class="major animatedParent animateOnce">
+								<h2 class="animated fadeInDownShort delay-250">What we do</h2>
+								<p class="animated fadeInDownShort delay-250">Your brand is what you believe in and how that´s brought to life is your audience.<br>Let us merge those two.</p>
 							</header>
-							<ul class="features" >
-								<li class="icon fa-paper-plane-o"  data-aos="zoom-in">
+							<ul class="features animatedParent" data-sequence='500'>
+								<li class="icon fa-paper-plane-o animated bounceInLeft" data-id='1'>
 									<h3 >Digital Strategy</h3>
 									<p>We tailor you a solution on how the online assets will fulfill your business needs, goals, opportunities and challenges.
                                     </p>
 								</li>
-								<li class="icon fa-laptop">
+								<li class="icon fa-laptop animated bounceInRight" data-id='2'>
 									<h3>Web Design</h3>
 									<p>We believe that every pixel counts. Thats why we, at scissor, deliver you the best products with Pixel perfect accuracy.</p>
 								</li>
-								<li class="icon  fa-pie-chart">
+								<li class="icon  fa-pie-chart animated bounceInLeft" data-id='3'>
 									<h3>Web Analytics</h3>
 									<p>Numbers are boring, but people are amazing. Our Analytics are user focused and experience driven. People matter more than numbers.</p>
 								</li>
-								<li class="icon fa-heart-o">
+								<li class="icon fa-heart-o animated bounceInRight" data-id='4'>
 									<h3>Social Media</h3>
 									<p>Its very importat to know the heart of your costumers. Thats why we provide you with the key to their happiness.</p>
 								</li>
-								<li class="icon fa-heart-o">
+								<li class="icon fa-heart-o animated bounceInLeft" data-id='5'>
 									<h3>Comunication Design</h3>
 									<p>Imagine if we had no face, and no name. We would all be the same. And hummm... that's boring! Let us make you different!</p>
 								</li>
-								<li class="icon fa-code">
+								<li class="icon fa-code animated bounceInRight" data-id="6">
 									<h3>Mobile apps</h3>
 									<p>We don’t deliver mesmerising yet useless weather apps. We work in real projects, for real people. And they will use the app, not just admire it.</p>
 								</li>
@@ -172,6 +173,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+            <script src="assets/js/css3-animate-it.js"></script>
 
 	</body>
 </html>
