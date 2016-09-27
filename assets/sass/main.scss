@@ -15,12 +15,12 @@
     width: device-width;
 }
 
-
 ::selection {
     color: white; 
-    background: #ed4933;
+    background: #4A5461;
 }
 body {
+    
     background: _palette(bg);
     &.is-loading {
         *,
@@ -1005,7 +1005,7 @@ button,
             h5,
             h6 {
                 border-color: _palette($p, border);
-                color: #ed4933;
+                color: #4A5461;
                 padding-bottom: 3rem;
             }
             p {
@@ -1176,6 +1176,7 @@ button,
 /* Page Wrapper + Menu */
 
 #page-wrapper {
+    overflow: hidden;
     @include vendor('transition',
     'opacity #{_duration(menu)} ease');
     opacity: 1;
@@ -1200,7 +1201,7 @@ button,
     @include vendor('transition',
     'transform #{_duration(menu)} ease');
     -webkit-overflow-scrolling: touch;
-    background: _palette(accent1, bg);
+    background: #4A5461;
     color: _palette(accent1, fg-bold);
     height: 100%;
     max-width: 80%;
@@ -1212,6 +1213,7 @@ button,
     width: 20em;
     z-index: _misc(z-index-base) + 2;
     ul {
+        margin-top: 1rem;
         list-style: none;
         padding: 0;
         > li {
@@ -1276,7 +1278,7 @@ body.is-menu-visible {
 #header {
     @include vendor('transition',
     'background-color #{_duration(transitions)} ease');
-    background: _palette(bg);
+    background: white;
     height: 3em;
     left: 0;
     line-height: 3em;
@@ -1285,7 +1287,10 @@ body.is-menu-visible {
     width: 100%;
     z-index: _misc(z-index-base);
     transition: all 600ms ease-in-out;
+    color: _palette(bg);
+    box-shadow: 0px 0px 1px #ccc;
     h1 {
+        color: _palette(bg);
         @include vendor('transition',
         'opacity #{_duration(transitions)} ease');
         height: inherit;
@@ -1294,6 +1299,8 @@ body.is-menu-visible {
         position: absolute;
         top: 0;
         a {
+            transition: all 600ms ease-in-out;
+            color: _palette(bg);
             border: 0;
             display: block;
             height: inherit;
@@ -1328,8 +1335,11 @@ body.is-menu-visible {
                     &.menuToggle {
                         outline: 0;
                         position: relative;
+                        color: _palette(bg);
+                        transition: all 600ms ease-in-out;
                         &:after {
-                            background-image: url('images/bars.svg');
+                            transition: all 600ms ease-in-out;
+                            background-image: url('images/bars_azul.svg');
                             background-position: right center;
                             background-repeat: no-repeat;
                             content: '';
@@ -1337,6 +1347,7 @@ body.is-menu-visible {
                             height: 3.75em;
                             vertical-align: top;
                             width: 2em;
+                            
                         }
                         @include breakpoint(small) {
                             padding: 0 1.5em;
@@ -1356,14 +1367,52 @@ body.is-menu-visible {
         }
     }
     &.alt {
+        
         background: transparent;
-        margin-top: -3em;
         transition: all 600ms ease-in-out;
+        box-shadow: 0px 0px 0px transparent;
+         
+        a{
+            transition: all 600ms ease-in-out;
+            padding-top: 1rem;
+            color: white;
+        }
         h1 {
             @include vendor('pointer-events',
             'none');
-            opacity: 0;
+            opacity: 1;
         }
+        
+        
+        nav{
+            
+            > ul{
+                > li{
+                    > a{
+                        &.menuToggle{
+                            transition: all 600ms ease-in-out;
+                            color: white;
+                            &:after {
+                                transition: all 600ms ease-in-out;
+                            background-image: url('images/bars.svg');
+                            background-position: right center;
+                            background-repeat: no-repeat;
+                            content: '';
+                            display: inline-block;
+                            height: 3.75em;
+                            vertical-align: top;
+                            width: 2em
+                            }
+                        }
+                        
+                        
+                    }
+                    
+                }
+                
+            }
+        }
+        
     }
 }
 
@@ -1421,8 +1470,9 @@ body.is-menu-visible {
     }
     p {
         letter-spacing: _size(letter-spacing-alt);
-        font-size: 1.20em;
-        margin-top: 2rem;
+        font-size: 1.5em;
+        margin-top: 0.5rem;
+        line-height: 2.5rem;
         a {
             
             color: inherit;
@@ -1852,3 +1902,11 @@ body.is-mobile {
     color: black;
 }
 
+
+#one {
+    background-image: linear-gradient(to top right,#fcfcfc 0,#fff 100%);
+}
+
+.m-top {
+    margin-top: 2rem;
+}
